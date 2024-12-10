@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/* Navbar */
+.navbar-nav li a{
+  font-size: 17px;
+}
+.navbar-brand{
+  letter-spacing: 3px;
+}
+
+
+
+.product-card {
+  position: relative;
+  overflow: hidden;
+  border: none; 
+  cursor: pointer;
+}
+
+.card-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Adjust as needed */
+  overflow: hidden;
+}
+
+.card-img-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card-img-top.main-img {
+  opacity: 1;
+  z-index: 1;
+}
+
+.card-img-top.hover-img {
+  opacity: 0;
+  z-index: 2;
+}
+
+.card-img-wrapper:hover .main-img {
+  opacity: 0;
+}
+
+.card-img-wrapper:hover .hover-img {
+  opacity: 1;
+}
+
+.current-price {
+  font-weight: bold;
+  color: #28a745;
+}
+
+.compare-price {
+  font-size: 0.9rem;
+}
